@@ -20,5 +20,5 @@ jobs:
           DATABASE_PORT: '4497'
           DATABASE_NAME: 'Rfam'
           DATABASE_USERNAME: 'rfamro'
-          DATABASE_PASSWORD: none
+          DATABASE_PASSWORD: ''
           DATABASE_SCRIPT: 'script.sql'
