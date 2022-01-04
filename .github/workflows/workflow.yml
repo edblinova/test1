@@ -13,12 +13,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: connect with DB
-        uses: gtadam/mysql-deploy-action@v1
+      - uses: shogo82148/actions-setup-mysql@v1
         with:
-          DATABASE_HOST: 'mysql-rfam-public.ebi.ac.uk'
-          DATABASE_PORT: '4497'
-          DATABASE_NAME: 'Rfam'
-          DATABASE_USERNAME: 'rfamro'
-          DATABASE_PASSWORD: ''
-          DATABASE_SCRIPT: 'script.sql'
+          mysql-version: '8.0'
+      - run: mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam
